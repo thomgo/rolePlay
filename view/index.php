@@ -20,8 +20,15 @@
 </section>
 <section>
   <h3>Your characters so far</h3>
-  <article>
-    <h4>Character's name</h4>
-  </article>
+  <?php if (!empty($_SESSION["characters"])): ?>
+    <?php foreach ($_SESSION["characters"] as $key => $character): ?>
+      <article>
+        <h4><?php echo $character->getName(); ?></h4>
+        <span><?php echo $character->getRole(); ?></span>
+      </article>
+    <?php endforeach ?>
+  <?php else: ?>
+    <p>No characters have been created for now</p>
+  <?php endif; ?>
 </section>
 <?php include "template/footer.php"; ?>
