@@ -1,7 +1,7 @@
 <?php include "template/header.php"; ?>
 <section>
   <h2>Add a new character to your adventure</h2>
-  <form action="" method="post">
+  <form action="index.php" method="post">
     <label for="name">Your character's name :</label><br>
     <input type="text" name="name" value=""><br>
     <label for="name">Age :</label><br>
@@ -20,6 +20,9 @@
 </section>
 <section>
   <h3>Your characters so far</h3>
+  <span>
+    <a href="index.php?action=clear">Clear</a>
+  </span>
   <?php if (!empty($_SESSION["characters"])): ?>
     <?php foreach ($_SESSION["characters"] as $key => $character): ?>
       <article>
