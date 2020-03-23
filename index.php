@@ -1,9 +1,10 @@
 <?php
 require "model/character.php";
 
-// Start the sessions and initialize an empty array at the index "characters"
+// Start the sessions
 session_start();
 
+// If the user has clicked on clear then we delete all the characters that are stored in session
 if (isset($_GET["action"]) && $_GET["action"]=="clear") {
   $_SESSION["characters"] = [];
 }
@@ -13,6 +14,7 @@ if (isset($_GET["action"]) && $_GET["action"]=="clear") {
 if (isset($_POST['character_creation'])) {
   // Instanciate a character object with the form data
   $character = new Character($_POST);
+  // Store the character in an array in session at index "characters"
   $_SESSION["characters"][] = $character;
 }
 
