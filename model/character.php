@@ -8,11 +8,11 @@ class Character
 
   const BASE_LIFE = 100;
 
-  protected $name;
-  protected $age;
-  protected $description;
-  protected $role;
-  protected $life;
+  protected string $name;
+  protected int $age;
+  protected string $description;
+  protected string $role;
+  protected int $life;
 
   function __construct(array $data)
   {
