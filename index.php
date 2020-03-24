@@ -12,10 +12,15 @@ if (isset($_GET["action"]) && $_GET["action"]=="clear") {
 // If the character creation form has been submitted then proceed
 // We could use !empty($_POST) instead but with isset we make sure this is not antoher form submitted
 if (isset($_POST['character_creation'])) {
-  // Instanciate a character object with the form data
-  $character = new Character($_POST);
-  // Store the character in an array in session at index "characters"
-  $_SESSION["characters"][] = $character;
+  try {
+    // Instanciate a character object with the form data
+    $character = new Character($_POST);
+    // Store the character in an array in session at index "characters"
+    $_SESSION["characters"][] = $character;
+  } catch (Exception $e) {
+    // Store the exception message to display it later to user in the form
+    $instance_error = $e->getMessage();
+  }
 }
 
 require "view/index.php";

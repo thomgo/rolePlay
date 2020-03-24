@@ -44,6 +44,9 @@ class Character
 
   public function setName(string $name): Character
   {
+      if (strlen($name) > 50 || preg_match('/[^A-Za-z]/', $name)) {
+        throw new Exception('Name can not be longer than 50 and must contain only letters');
+      }
       $this->name = $name;
 
       return $this;
@@ -57,6 +60,9 @@ class Character
 
   public function setAge(int $age): Character
   {
+      if ($age < 15 || $age > 1000) {
+        throw new Exception('Age must be between 15 and 1000 years');
+      }
       $this->age = $age;
 
       return $this;
@@ -70,6 +76,9 @@ class Character
 
   public function setDescription(string $description): Character
   {
+      if (strlen($description) > 150 || preg_match('/[^A-Za-z0-9]/', $description)) {
+        throw new Exception('Description can not be longer than 150 and must contain only letters or numbers');
+      }
       $this->description = $description;
 
       return $this;
@@ -83,6 +92,9 @@ class Character
 
   public function setRole(string $role): Character
   {
+      if (!in_array($role, ["warrior", "archer", "wizard"])) {
+        throw new Exception("The role must be either warrior, wizard or archer");
+      }
       $this->role = $role;
 
       return $this;

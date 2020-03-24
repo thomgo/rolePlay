@@ -4,6 +4,11 @@
 <!-- First section with the formulaire to enter character data -->
 <section>
   <h2>Add a new character to your adventure</h2>
+  <?php if (!empty($instance_error)): ?>
+    <div>
+      <p><?php echo "Your data is unvalid : " . $instance_error; ?></p>
+    </div>
+  <?php endif; ?>
   <!-- Action is specified to avoid remaining arguments in the url after clicking on clear -->
   <form action="index.php" method="post">
     <label for="name">Your character's name (letters only) :</label><br>
@@ -17,7 +22,7 @@
       <option value="wizard">Wizard</option>
     </select><br>
     <label for="name">A short description (letters only):</label><br>
-    <textarea name="description" rows="8" cols="80" maxlength="150" pattern="[A-Za-z]+" required></textarea>
+    <textarea name="description" rows="8" cols="80" maxlength="150" required></textarea>
     <br>
     <input type="submit" name="character_creation" value="Create">
   </form>
