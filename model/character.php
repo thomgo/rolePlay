@@ -5,6 +5,9 @@
  */
 class Character
 {
+
+  const BASE_LIFE = 100;
+
   protected $name;
   protected $age;
   protected $description;
@@ -13,11 +16,24 @@ class Character
 
   function __construct(array $data)
   {
-    $this->setName($data["name"]);
-    $this->setAge($data["age"]);
-    $this->setDescription($data["description"]);
-    $this->setRole($data["role"]);
-    $this->setLife(100);
+    // The code we use if we do not use an hydrator
+    // $this->setName($data["name"]);
+    // $this->setAge($data["age"]);
+    // $this->setDescription($data["description"]);
+    // $this->setRole($data["role"]);
+    $this->hydrate($data);
+    $this->setLife(self::BASE_LIFE);
+  }
+
+  public function hydrate(array $data): Character
+  {
+    foreach ($data as $key => $value) {
+      $method = "set" . ucfirst($key);
+      if (method_exists($this, $method)) {
+        $this->$method($value);
+      }
+    }
+    return $this;
   }
 
 

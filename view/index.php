@@ -35,6 +35,9 @@
       <article>
         <h4><?php echo $character->getName(); ?></h4>
         <span><?php echo $character->getRole(); ?></span>
+        <span><?php echo $character->getLife() . "LP"; ?></span>
+        <span><?php echo $character->getAge() . "years" ?></span>
+        <p><?php echo $character->getDescription(); ?></p>
       </article>
     <?php endforeach ?>
   <?php else: ?>
