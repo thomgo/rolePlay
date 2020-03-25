@@ -33,20 +33,22 @@
   <h3>Your characters so far</h3>
   <span>
     <!-- An argument is passed in the url to trigger some action in the controller index.php -->
-    <a href="index.php?action=clear">Clear</a>
+    <a class="btn" href="index.php?action=clear">Clear</a>
   </span>
-  <?php if (!empty($_SESSION["characters"])): ?>
-    <?php foreach ($_SESSION["characters"] as $key => $character): ?>
-      <article>
-        <h4><?php echo $character->getName(); ?></h4>
-        <span><?php echo $character->getRole(); ?></span>
-        <span><?php echo $character->getLife() . "LP"; ?></span>
-        <span><?php echo $character->getAge() . "years" ?></span>
-        <p><?php echo $character->getDescription(); ?></p>
-      </article>
-    <?php endforeach ?>
-  <?php else: ?>
-    <p>No characters have been created for now</p>
-  <?php endif; ?>
+  <div>
+    <?php if (!empty($_SESSION["characters"])): ?>
+      <?php foreach ($_SESSION["characters"] as $key => $character): ?>
+        <article>
+          <h4><?php echo $character->getName(); ?></h4>
+          <span><?php echo $character->getRole(); ?></span>
+          <span><?php echo $character->getLife() . "LP"; ?></span>
+          <span><?php echo $character->getAge() . "years" ?></span>
+          <p><?php echo $character->getDescription(); ?></p>
+        </article>
+      <?php endforeach ?>
+    <?php else: ?>
+      <p>No characters have been created for now</p>
+    <?php endif; ?>
+  </div>
 </section>
 <?php include "template/footer.php"; ?>

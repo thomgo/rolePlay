@@ -17,6 +17,9 @@ h2, h3 {
   font-size: 2em;
 }
 
+h4 {
+  font-size: 1.3em;
+}
 /* Header rules */
 
 header {
@@ -83,13 +86,7 @@ input[type=submit]{
   display: block;
   margin: auto;
   padding: 0.5em 2em;
-}
-
-article {
-  width: 150px;
-  height: 150px;
-  background-color: #254e70;
-  color: white;
+  font-weight: bold;
 }
 
 .alert-danger {
@@ -101,4 +98,36 @@ article {
 
 .alert-danger p {
   margin: 1em 0.5em;
+}
+
+.btn {
+  background-color: #c33c54;
+  color: white;
+  width: auto;
+  padding: 0.3em 1em;
+  border: 2px solid black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article {
+  width: 200px;
+  height: 200px;
+  background-color: #254e70;
+  color: white;
+  border: 2px solid black;
+  margin: 1em 0;
+  text-align: center;
+  padding: 0.5em;
+}
+
+article p {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+#characters_section div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
