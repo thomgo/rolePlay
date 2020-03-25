@@ -8,6 +8,17 @@ h1, h2, h3 {
   font-family: 'VT323', monospace;
 }
 
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
 
 /* Header rules */
 
@@ -19,5 +30,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  color: #0f9b6f;
+}
 
+header p {
+  font-size: 1.2em;
+  font-style: italic;
 }
