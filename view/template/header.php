@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>The knight and the wizard</title>
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/main.css">
   </head>
   <body>
     <header>
