@@ -13,12 +13,8 @@ h1 {
   font-size: 3em;
 }
 
-h2 {
+h2, h3 {
   font-size: 2em;
-}
-
-h3 {
-  font-size: 1.5em;
 }
 
 /* Header rules */
@@ -87,4 +83,22 @@ input[type=submit]{
   display: block;
   margin: auto;
   padding: 0.5em 2em;
+}
+
+article {
+  width: 150px;
+  height: 150px;
+  background-color: #254e70;
+  color: white;
+}
+
+.alert-danger {
+  width: 90%;
+  background-color: #c33c54;
+  border: 2px solid black;
+  margin-bottom: 1em;
+}
+
+.alert-danger p {
+  margin: 1em 0.5em;
 }

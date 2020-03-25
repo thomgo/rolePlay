@@ -5,14 +5,14 @@
 <section id="form_section">
   <h2>Add a new character to your adventure</h2>
   <?php if (!empty($instance_error)): ?>
-    <div>
+    <div class="alert-danger">
       <p><?php echo "Your data is unvalid : " . $instance_error; ?></p>
     </div>
   <?php endif; ?>
   <!-- Action is specified to avoid remaining arguments in the url after clicking on clear -->
   <form action="index.php" method="post">
     <label for="name">Your character's name (letters only) :</label><br>
-    <input type="text" name="name" maxlength="50" pattern="[A-Za-z]+" required><br>
+    <input type="text" name="name" maxlength="50" pattern="[A-Za-z ]+" required><br>
     <label for="name">Age (between 15 and 1000 years !) :</label><br>
     <input type="number" name="age" min="15" max="1000" required><br>
     <label for="name">Role type :</label><br>
