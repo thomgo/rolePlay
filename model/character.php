@@ -44,7 +44,7 @@ class Character
 
   public function setName(string $name): Character
   {
-      if (strlen($name) > 50 || preg_match('/[^A-Za-z]/', $name)) {
+      if (strlen($name) > 50 || preg_match('/[^A-Za-z ]/', $name)) {
         throw new Exception('Name can not be longer than 50 and must contain only letters');
       }
       $this->name = $name;
@@ -76,7 +76,7 @@ class Character
 
   public function setDescription(string $description): Character
   {
-      if (strlen($description) > 150 || preg_match('/[^A-Za-z0-9]/', $description)) {
+      if (strlen($description) > 150 || preg_match('/[^A-Za-z0-9 ]/', $description)) {
         throw new Exception('Description can not be longer than 150 and must contain only letters or numbers');
       }
       $this->description = $description;

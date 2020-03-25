@@ -12,7 +12,7 @@
   <!-- Action is specified to avoid remaining arguments in the url after clicking on clear -->
   <form action="index.php" method="post">
     <label for="name">Your character's name (letters only) :</label><br>
-    <input type="text" name="name" maxlength="50" pattern="[A-Za-z]+" required><br>
+    <input type="text" name="name" maxlength="50" pattern="[A-Za-z ]+" required><br>
     <label for="name">Age (between 15 and 1000 years !) :</label><br>
     <input type="number" name="age" min="15" max="1000" required><br>
     <label for="name">Role type :</label><br>
