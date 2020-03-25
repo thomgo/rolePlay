@@ -55,3 +55,36 @@ main {
 #characters_section {
   width: 60%;
 }
+
+form {
+  width: 90%;
+}
+
+input, select, textarea {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+input, select, textarea {
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+  border: 2px solid black;
+  border-radius: 0;
+  width: 100%;
+  padding: 0.3em 0;
+  padding-left: 0.3em;
+}
+
+select {
+  background-color: white;
+}
+
+input[type=submit]{
+  background-color: #0f9b6f;
+  color: white;
+  width: auto;
+  display: block;
+  margin: auto;
+  padding: 0.5em 2em;
+}

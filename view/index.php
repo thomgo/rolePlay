@@ -22,7 +22,7 @@
       <option value="wizard">Wizard</option>
     </select><br>
     <label for="name">A short description (letters only):</label><br>
-    <textarea name="description" rows="8" cols="80" maxlength="150" required></textarea>
+    <textarea name="description" rows="4" maxlength="150" required></textarea>
     <br>
     <input type="submit" name="character_creation" value="Create">
   </form>
