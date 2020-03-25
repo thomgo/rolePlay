@@ -2,7 +2,7 @@
 <?php include "template/header.php"; ?>
 
 <!-- First section with the formulaire to enter character data -->
-<section>
+<section id="form_section">
   <h2>Add a new character to your adventure</h2>
   <?php if (!empty($instance_error)): ?>
     <div>
@@ -29,7 +29,7 @@
 </section>
 
 <!-- Second section displaying the characters stored in the session -->
-<section>
+<section id="characters_section">
   <h3>Your characters so far</h3>
   <span>
     <!-- An argument is passed in the url to trigger some action in the controller index.php -->
