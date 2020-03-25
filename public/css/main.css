@@ -1,0 +1,23 @@
+/* Global rules */
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'VT323', monospace;
+}
+
+
+/* Header rules */
+
+header {
+  height: 40vh;
+  background-image: url('../img/black_castle.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
