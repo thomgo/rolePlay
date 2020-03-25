@@ -11,6 +11,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 3em;
+  margin: 0;
 }
 
 h2, h3 {
@@ -18,7 +19,9 @@ h2, h3 {
 }
 
 h4 {
-  font-size: 1.3em;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0;
 }
 /* Header rules */
 
@@ -37,6 +40,11 @@ header {
 header p {
   font-size: 1.2em;
   font-style: italic;
+  margin: 0
+}
+
+header span {
+  font-size: 5em;
 }
 
 /* Main rules */
@@ -110,10 +118,16 @@ input[type=submit]{
   font-weight: bold;
 }
 
+#characters_section div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 article {
   width: 200px;
   height: 200px;
-  background-color: #254e70;
+  background-color: #0f9b6f;
   color: white;
   border: 2px solid black;
   margin: 1em 0;
@@ -126,8 +140,10 @@ article p {
   font-style: italic;
 }
 
-#characters_section div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.character_image {
+  font-size: 4em;
+}
+
+.life {
+  color: #c33c54;
 }

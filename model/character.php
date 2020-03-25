@@ -12,6 +12,7 @@ class Character
   protected int $age;
   protected string $description;
   protected string $role;
+  protected string $image;
   protected int $life;
 
   function __construct(array $data)
@@ -96,8 +97,29 @@ class Character
         throw new Exception("The role must be either warrior, wizard or archer");
       }
       $this->role = $role;
-
+      $this->setImage($role);
       return $this;
+  }
+
+
+  public function getImage(): string
+  {
+    return $this->image;
+  }
+
+  public function setImage(string $role): Character
+  {
+    if ($role === "warrior") {
+      $this->image = "icon-267";
+    }
+    elseif ($role === "archer") {
+      $this->image = "icon-200";
+    }
+    else {
+      $this->image = "icon-255";
+    }
+    
+    return $this;
   }
 
 

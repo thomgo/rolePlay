@@ -33,16 +33,17 @@
   <h3>Your characters so far</h3>
   <span>
     <!-- An argument is passed in the url to trigger some action in the controller index.php -->
-    <a class="btn" href="index.php?action=clear">Clear</a>
+    <a class="btn" href="index.php?action=clear">Clear <span class="icon-257"></span> </a>
   </span>
   <div>
     <?php if (!empty($_SESSION["characters"])): ?>
       <?php foreach ($_SESSION["characters"] as $key => $character): ?>
         <article>
+          <span class="character_image <?php echo $character->getImage(); ?>"></span>
           <h4><?php echo $character->getName(); ?></h4>
-          <span><?php echo $character->getRole(); ?></span>
-          <span><?php echo $character->getLife() . "LP"; ?></span>
-          <span><?php echo $character->getAge() . "years" ?></span>
+          <p><?php echo $character->getRole(); ?></p>
+          <span><?php echo $character->getLife(); ?> <span class="life icon-008"> </span></span>
+          <span><?php echo $character->getAge() . " years" ?></span>
           <p><?php echo $character->getDescription(); ?></p>
         </article>
       <?php endforeach ?>
