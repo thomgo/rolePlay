@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="public/css/normalize.css">
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/icons/font/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|VT323|Merienda&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>

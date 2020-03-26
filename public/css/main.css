@@ -58,6 +58,10 @@ h1, h2, h3 {
   font-family: 'VT323', monospace;
 }
 
+article *{
+  font-family: 'Merienda', cursive;
+}
+
 h1 {
   font-size: 3em;
   margin: 0;
