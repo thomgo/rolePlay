@@ -10,11 +10,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="flex full-center main-color">
       <section>
         <h1>The knight and the wizard</h1>
         <span class="icon-269"></span>
         <p>An epic adventure...</p>
       </section>
     </header>
-    <main>
+    <main class="flex">

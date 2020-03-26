@@ -5,7 +5,7 @@
 <section id="form_section">
   <h2>Add a new character to your adventure</h2>
   <?php if (!empty($instance_error)): ?>
-    <div class="alert-danger">
+    <div class="alert-danger second-bg">
       <p><?php echo "Your data is unvalid : " . $instance_error; ?></p>
     </div>
   <?php endif; ?>
@@ -24,7 +24,7 @@
     <label for="name">A short description (letters only):</label><br>
     <textarea name="description" rows="4" maxlength="150" required></textarea>
     <br>
-    <input type="submit" name="character_creation" value="Create">
+    <input class="main-bg btn" type="submit" name="character_creation" value="Create">
   </form>
 </section>
 
@@ -33,16 +33,16 @@
   <h3>Your characters so far</h3>
   <span>
     <!-- An argument is passed in the url to trigger some action in the controller index.php -->
-    <a class="btn" href="index.php?action=clear">Clear <span class="icon-257"></span> </a>
+    <a class="btn second-bg" href="index.php?action=clear">Clear <span class="icon-257"></span> </a>
   </span>
-  <div>
+  <div class="flex">
     <?php if (!empty($_SESSION["characters"])): ?>
       <?php foreach ($_SESSION["characters"] as $key => $character): ?>
-        <article>
-          <span class="character_image <?php echo $character->getImage(); ?>"></span>
+        <article class="main-bg">
+          <span class="character-image <?php echo $character->getImage(); ?>"></span>
           <h4><?php echo $character->getName(); ?></h4>
           <p><?php echo $character->getRole(); ?></p>
-          <span><?php echo $character->getLife(); ?> <span class="life icon-008"> </span></span>
+          <span><?php echo $character->getLife(); ?> <span class="second-color icon-008"> </span></span>
           <span><?php echo $character->getAge() . " years" ?></span>
           <p><?php echo $character->getDescription(); ?></p>
         </article>

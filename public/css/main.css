@@ -1,4 +1,53 @@
-/* Global rules */
+/*
+~~~~~~~~ Utility classes ~~~~~~~~~~
+*/
+
+.flex {
+  display: flex;
+}
+
+.full-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.main-bg {
+  background-color: #0f9b6f;
+  color: white;
+}
+
+.main-color {
+  color: #0f9b6f;
+}
+
+.second-bg {
+  background-color: #c33c54;
+  color: white;
+}
+
+.second-color {
+  color: #c33c54;
+}
+
+.alert-danger {
+  width: 90%;
+  margin-bottom: 1em;
+}
+
+.alert-danger p {
+  margin: 1em 0.5em;
+}
+
+.btn {
+  width: auto;
+  padding: 0.5em 2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*
+~~~~~~~ Global rules ~~~~~~~~
+*/
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -23,18 +72,21 @@ h4 {
   margin-top: 1em;
   margin-bottom: 0;
 }
-/* Header rules */
+
+input, select, textarea, .btn, .alert-danger, article {
+  border: 2px solid black;
+}
+
+/*
+~~~~~~~~ Header rules ~~~~~~~~~
+*/
 
 header {
   height: 40vh;
   background-image: url('../img/black_castle.png');
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  color: #0f9b6f;
   border-bottom: 2px solid black;
 }
 
@@ -48,12 +100,13 @@ header span {
   font-size: 5em;
 }
 
-/* Main rules */
+/*
+~~~~~~~~~ Main rules ~~~~~~~~~~
+*/
 
 main {
   width: 90%;
   margin: auto;
-  display: flex;
 }
 
 #form_section {
@@ -69,15 +122,14 @@ form {
 }
 
 input, select, textarea {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 input, select, textarea {
   margin-top: 0.3em;
   margin-bottom: 1em;
-  border: 2px solid black;
   border-radius: 0;
   width: 100%;
   padding: 0.3em 0;
@@ -89,38 +141,11 @@ select {
 }
 
 input[type=submit]{
-  background-color: #0f9b6f;
-  color: white;
-  width: auto;
   display: block;
   margin: auto;
-  padding: 0.5em 2em;
-  font-weight: bold;
-}
-
-.alert-danger {
-  width: 90%;
-  background-color: #c33c54;
-  border: 2px solid black;
-  margin-bottom: 1em;
-}
-
-.alert-danger p {
-  margin: 1em 0.5em;
-}
-
-.btn {
-  background-color: #c33c54;
-  color: white;
-  width: auto;
-  padding: 0.3em 1em;
-  border: 2px solid black;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 #characters_section div {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -128,10 +153,7 @@ input[type=submit]{
 article {
   width: 200px;
   height: 200px;
-  background-color: #0f9b6f;
-  color: white;
-  border: 2px solid black;
-  margin: 1em 0;
+  margin: 2em 0;
   text-align: center;
   padding: 0.5em;
 }
@@ -141,24 +163,17 @@ article p {
   font-style: italic;
 }
 
-.character_image {
+.character-image {
   font-size: 4em;
 }
 
-.life {
-  color: #c33c54;
-}
-
-/* Footer style */
+/*
+~~~~~~~~ Footer rules ~~~~~~~~~
+*/
 
 footer {
   margin-bottom: 0;
   margin-top: 3em;
   height: 15vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #0f9b6f;
-  color: white;
   border-top: 2px solid black;
 }
