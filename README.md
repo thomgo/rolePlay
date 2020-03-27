@@ -1,48 +1,39 @@
-# Interface de création de joueur en PHP
+# Mise en forme d'une interface de création de joueur
 
-Il s'agit d'une application développée dans le cadre de mon activité de formateur en développement web. L'objectif avec ce projet est que les étudiants découvrent les utilisations classiques de PHP sur un site web simple, ici une interface qui permet via un formulaire de créer un profil pour un jeu de type RPG. En plus des usages classiques, ils pratiquent également la programmation orientée objet abordée précédemment et s'initient à l'organisation MVC.
+Il s'agit d'une application développée dans le cadre de mon activité de formateur en développement web. Pour ce projet, les étudiants reprennent une application déjà produite précédemment en PHP et HTML. L'objectif ici est qu'ils s'exercent sur la mise en forme d'interface à l'aide de CSS, sans pour l'instant prendre en considération les problématiques du responsive design.
 
 Au travers de cet exercice, ils apprennent à :
-- Organiser leur fichiers selon la logique de l'application
-- Travailler avec une entité objet
-- Instancier un objet avec les données d'un formulaire
-- Créer un template
-- Lever des exceptions
-- Gérer la visibilité des attributs et des méthodes
-- Transmettre des données par formulaire
-- Transmettre des données par url
-- Utiliser une session
-- Afficher des données stockées
-- Réaliser une structure HTML simple pour une page web
+- Maquetter une application
+- Définir une charte graphique
+- Utiliser le modèle de boîtes
+- Positionner les éléments à l'aide de flexbox
+- Mettre en forme des éléments (couleurs, bordures, fonds, fonts, ombres...)
+- Utiliser les classes et id
+- Utiliser des classes utilitaires
+- Utiliser les pseudo-sélecteurs
+- Intégrer des librairies CSS externes
+- Organiser sa feuille de styles de manière maintenable
 
 ## Consignes
 
-Vous venez d'obtenir votre diplôme de développeur et vous avez décidé de vous lancer dans la vie active. Votre profil a retenu l'attention d'une jeune start-up du secteur de l'industrie vidéoludique et celle-ci vous a recruté pour l'aider dans son projet : créer un mmorpg jouable via un navigateur web. L'entreprise vient juste de naître, vous faîtes partie des premières personnes recrutées et tout reste à faire. Pour l'instant les équipes sont en phase de recherche ou de développement de POC.
+Votre responsable a été séduit par la version fonctionnelle de l'application que vous lui avez présentée, il voudrait maintenant la voir mise en forme pour pouvoir la présenter aux investisseurs et soutenir la levée de fonds qui est en cours.
 
-On vous a demandé de produire une version fonctionnelle de ce que pourrait être l'interface de création des personnages. Pour l'instant pas de design ou de mise en forme, juste du PHP et du HTML mais l'interface doit être utilisable par le joueur. Votre patron décidera ensuite si cette version de l'interface mérite d'être poursuivie.
+Votre rôle est donc de définir une charte graphique moderne et adaptée à un jeu-vidéo, de réaliser une maquette de la page avec sa mise en forme et de réaliser cette mise en forme.
 
-Cette interface doit permettre de :
-- Rentrer les données du personnage via un formulaire
-- Créer autant de personnages que le joueur le souhaite
-- Voir les personnages créés les uns à côté des autres sur la même page
-- Effacer si on le souhaite tous les personnages créés en cliquant sur un lien
+Attention l'interface doit respecter les spécifications techniques suivantes :
+- Présence d'un header avec une image de fond
+- Le contenu principal est composé de deux colonnes, une contenant le formulaire, une contenant les personnages créés
+- Présence d'un footer
+- Le positionnement est réalisé à l'aide de flexbox
+- La charte graphique comporte au maximum trois couleurs autres que le blanc
+- Une maquette de l'interface est disponible dans le dossier du projet
+- Vous utilisez une roue chromatique pour établir votre charte graphique et non les couleurs du navigateur
+- Vous intégrez des polices via la librairie google fonts
+- Le CSS est passé au validateur
 
-Quelques spécifications techniques :
-- Vous n'avez pas de base de données, les personnages créés sont donc stockés dans la session du joueur
-- Les personnages sont des objets PHP
-- Vous utilisez le typage pour les attributs et les méthodes
-- Le formulaire contient une validation des données côté HTML
-
-Quelques informations sur les personnages :
-- Ils sont composés d'un nom, d'un âge, d'un rôle, d'une description et d'un niveau de vie
-- Le nom ne fait pas plus de 50 caractères et ne contient que des lettres
-- L'âge est compris entre 15 et 1000
-- Les rôles autorisés sont magicien, guerrier et archer
-- La description ne fait pas plus de 150 caractères et ne contient que des lettres ou des chiffres
-- La vie est par défaut de 100, le joueur ne la choisit pas
 
 ## Pour aller plus loin
 
-Pour l'instant la validation des données est réalisée côté front, dans le formulaire HTML. Cependant cela n'a aucune valeur en termes de sécurité puisque l'utilisateur pourrait, s'il le souhaitait, modifier ces règles dans la page du navigateur.
-
-Vous effectuerez donc une validation des données au sein de l'objet personnage, dans les setters, et déclencherez des messages d'erreur ou des exceptions que vous afficherez à l'utilisateur sur la page si ses données ne respectent pas les règles.
+Continuez d'enrichir votre interface, vous pouvez pour cela :
+- Intégrer une librairie d'icônes
+- Dynamiser l'interface à l'aide des pseudo sélecteurs (mettre un effet au survol des boutons par exemple)
