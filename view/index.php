@@ -2,7 +2,7 @@
 <?php include "template/header.php"; ?>
 
 <!-- First section with the formulaire to enter character data -->
-<section id="form_section">
+<aside id="form_section">
   <h2>Add a new character to your adventure</h2>
   <?php if (!empty($instance_error)): ?>
     <div class="alert-danger second-bg">
@@ -26,7 +26,7 @@
     <br>
     <input class="main-bg btn" type="submit" name="character_creation" value="Create">
   </form>
-</section>
+</aside>
 
 <!-- Second section displaying the characters stored in the session -->
 <section id="characters_section">
