@@ -46,3 +46,7 @@ Quelques informations sur les personnages :
 Pour l'instant la validation des données est réalisée côté front, dans le formulaire HTML. Cependant cela n'a aucune valeur en termes de sécurité puisque l'utilisateur pourrait, s'il le souhaitait, modifier ces règles dans la page du navigateur.
 
 Vous effectuerez donc une validation des données au sein de l'objet personnage, dans les setters, et déclencherez des messages d'erreur ou des exceptions que vous afficherez à l'utilisateur sur la page si ses données ne respectent pas les règles.
+
+## Version avec CSS
+
+voir branche css_version
